@@ -1,0 +1,5 @@
+﻿HTTP Method,동작,URL 형태
+GET,조회(SELECT * READ),/user/{id}
+POST,생성(CREATE),/user
+PUT/PATCH,수정(UPDATE) * CREATE,/user
+DELETE,삭제(DELETE),/user/{1}
