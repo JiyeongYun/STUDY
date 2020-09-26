@@ -18,7 +18,6 @@ public class UserRepositoryTest extends StudyApplicationTests {
     @Autowired
     private UserRepository userRepository;
 
-
     @Test
     @Transactional
     public void create(){
