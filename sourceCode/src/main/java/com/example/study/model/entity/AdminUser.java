@@ -24,7 +24,7 @@ public class AdminUser {
 
     private String password;
 
-    private String statud;
+    private String status;
 
     private String role;
 

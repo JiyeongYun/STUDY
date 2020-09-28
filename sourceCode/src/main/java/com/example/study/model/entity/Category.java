@@ -26,11 +26,10 @@ public class Category {
 
     private LocalDateTime createdAt;
 
-    private String cratedBy;
+    private String createdBy;
 
     private LocalDateTime updatedAt;
 
     private String updatedBy;
-
 
 }
