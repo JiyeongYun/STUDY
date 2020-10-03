@@ -34,11 +34,16 @@ public class UserRepositoryTest extends StudyApplicationTests {
         user.setEmail(email);
         user.setPhoneNumber(phoneNumber);
         user.setRegisteredAt(registeredAt);
-        user.setCreatedAt(createdAt);
-        user.setCreatedBy(createdBy);
 
-        User newUser = userRepository.save(user);
-        Assert.assertNotNull(newUser);
+        // account, password, status, email만 들어간 User 객체 생성
+        // . 연산자를 통해  객체 생성 가능
+        // 기존에는 account, password, status, email만 들어가는 생성자를 만들어야 했음.
+        User u = User.builder()
+                .account(account)
+                .password(password)
+                .status(status)
+                .email(email)
+                .build();
 
     }
 
