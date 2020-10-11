@@ -43,9 +43,8 @@ com/example/study/model/entity/Partner.java
  com.example.study.model.entity.Partner$PartnerBuilder
 com/example/study/repository/UserRepository.java
  com.example.study.repository.UserRepository
-com/example/study/model/network/request/UserApiRequest.java
- com.example.study.model.network.request.UserApiRequest
- com.example.study.model.network.request.UserApiRequest$UserApiRequestBuilder
+com/example/study/ifc/CrudInterface.java
+ com.example.study.ifc.CrudInterface
 com/example/study/controller/GetController.java
  com.example.study.controller.GetController
 com/example/study/model/network/Header.java
@@ -54,9 +53,20 @@ com/example/study/model/network/Header.java
 com/example/study/model/network/response/UserApiResponse.java
  com.example.study.model.network.response.UserApiResponse
  com.example.study.model.network.response.UserApiResponse$UserApiResponseBuilder
+com/example/study/model/network/request/UserApiRequest.java
+ com.example.study.model.network.request.UserApiRequest
+ com.example.study.model.network.request.UserApiRequest$UserApiRequestBuilder
 com/example/study/controller/api/UserApiController.java
  com.example.study.controller.api.UserApiController
 com/example/study/service/UserApiLogicService.java
  com.example.study.service.UserApiLogicService
-com/example/study/ifc/CrudInterface.java
- com.example.study.ifc.CrudInterface
+com/example/study/model/network/response/ItemApiResponse.java
+ com.example.study.model.network.response.ItemApiResponse
+ com.example.study.model.network.response.ItemApiResponse$ItemApiResponseBuilder
+com/example/study/model/network/request/ItemApiRequest.java
+ com.example.study.model.network.request.ItemApiRequest
+ com.example.study.model.network.request.ItemApiRequest$ItemApiRequestBuilder
+com/example/study/controller/api/ItemApiController.java
+ com.example.study.controller.api.ItemApiController
+com/example/study/service/ItemApiLogicService.java
+ com.example.study.service.ItemApiLogicService

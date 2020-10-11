@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class UserApiLogicService implements CrudInterface<UserApiRequest, UserApiResponse> {
@@ -45,17 +46,64 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
 
     @Override
     public Header<UserApiResponse> read(Long id) {
-        return null;
+
+        // 1. Id를 가지고 repository를 통해 getOne 혹은 getById를 통해 해당 정보를 가져온다.
+        Optional<User> optional = userRepository.findById(id);
+
+        // 2. user -> UserApiResponse return
+        //
+        return optional
+                .map(user -> response(user))
+                .orElseGet(
+                        ()->Header.ERROR("No Data")
+                );
+        //map: 다른 return 형태로 바꾸는 것.
+        //user가 있으면 map에 해당하여 reponse 메서드를 통해 return 되고,
+        //orElseGet: user가 없으면 () 메서드 하나 호출하여 헤더에 에러를 넘기면서 데이터가 없다는 것을 return
     }
 
     @Override
     public Header<UserApiResponse> update(Header<UserApiRequest> request) {
-        return null;
+
+        // 1. request data 가져오기
+        UserApiRequest userApiRequest = request.getData();
+
+        // 2. id를 가지고 User data 찾기
+        Optional<User> optional = userRepository.findById(userApiRequest.getId());
+
+        return optional.map(user -> {
+
+            // 3. update
+            user.setAccount(userApiRequest.getAccount())
+                    .setPassword(userApiRequest.getPassword())
+                    .setStatus(userApiRequest.getStatus())
+                    .setPhoneNumber(userApiRequest.getPhoneNumber())
+                    .setEmail(userApiRequest.getEmail())
+                    .setRegisteredAt(userApiRequest.getRegisteredAt())
+                    .setUnregisteredAt(userApiRequest.getUnregisteredAt());
+
+            return user;
+        })
+        .map(user -> userRepository.save(user))         // update -> newUser
+        .map(updateUser->response(updateUser))          // userApiResponse
+        .orElseGet(()->Header.ERROR("No User"));
     }
 
     @Override
     public Header delete(Long id) {
-        return null;
+
+        // 1. id를 통해 repository에서 user를 찾는다.
+        Optional<User> optional = userRepository.findById(id);
+
+        // 2. repository를 통해 delete
+        // 3. response
+        return optional.map(user -> {
+            userRepository.delete(user);
+            return Header.OK();
+        })
+        .orElseGet(()->Header.ERROR("No Data"));
+
+
     }
 
     private Header<UserApiResponse> response(User user){
