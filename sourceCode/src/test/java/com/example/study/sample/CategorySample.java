@@ -4,9 +4,10 @@ import com.example.study.StudyApplicationTests;
 import com.example.study.model.entity.Category;
 import com.example.study.repository.CategoryRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.TestPropertySource;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.List;

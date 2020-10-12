@@ -8,7 +8,7 @@ import com.example.study.repository.AdminUserRepository;
 import com.example.study.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
