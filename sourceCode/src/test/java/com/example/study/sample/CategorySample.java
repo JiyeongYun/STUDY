@@ -17,7 +17,6 @@ public class CategorySample extends StudyApplicationTests {
     @Autowired
     private CategoryRepository categoryRepository;
 
-
     @Test
     public void createSample(){
         List<String> category = Arrays.asList("COMPUTER","CLOTHING","MULTI_SHOP","INTERIOR","FOOD","SPORTS","SHOPPING_MALL","DUTY_FREE","BEAUTY");

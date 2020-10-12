@@ -6,6 +6,7 @@ import com.example.study.model.entity.OrderDetail;
 import com.example.study.model.entity.OrderGroup;
 import com.example.study.model.entity.User;
 import com.example.study.model.enumclass.OrderType;
+import com.example.study.model.enumclass.PaymentType;
 import com.example.study.repository.ItemRepository;
 import com.example.study.repository.OrderDetailRepository;
 import com.example.study.repository.OrderGroupRepository;
@@ -109,7 +110,7 @@ public class OrderDetailSample extends StudyApplicationTests {
                 .orderType(type)
                 .revAddress("경기도 분당구 판교역로")
                 .revName(user.getEmail())
-                .paymentType(paymentType)
+                .paymentType(PaymentType.CARD)
                 .totalPrice(new BigDecimal(totalAmount))
                 .orderAt(getRandomDate())
                 .totalQuantity(itemCount)
