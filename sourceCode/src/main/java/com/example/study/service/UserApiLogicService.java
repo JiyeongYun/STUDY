@@ -8,13 +8,17 @@ import com.example.study.model.network.request.UserApiRequest;
 import com.example.study.model.network.response.UserApiResponse;
 import com.example.study.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class UserApiLogicService extends BaseService<UserApiRequest, UserApiResponse, User> {
+
 
     // 1. request data 가져오기
     // 2. User 생성
@@ -120,4 +124,5 @@ public class UserApiLogicService extends BaseService<UserApiRequest, UserApiResp
         // return Header + data
         return Header.OK(userApiResponse);
     }
+
 }

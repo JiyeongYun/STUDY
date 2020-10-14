@@ -55,8 +55,8 @@ com/example/study/model/network/request/ItemApiRequest.java
 com/example/study/model/entity/OrderDetail.java
  com.example.study.model.entity.OrderDetail
  com.example.study.model.entity.OrderDetail$OrderDetailBuilder
-com/example/study/controller/api/UserApiController.java
- com.example.study.controller.api.UserApiController
+com/example/study/repository/CategoryRepository.java
+ com.example.study.repository.CategoryRepository
 com/example/study/service/BaseService.java
  com.example.study.service.BaseService
 com/example/study/service/UserApiLogicService.java
@@ -130,5 +130,5 @@ com/example/study/controller/api/OrderDetailApiController.java
 com/example/study/model/network/response/CategoryApiResponse.java
  com.example.study.model.network.response.CategoryApiResponse
  com.example.study.model.network.response.CategoryApiResponse$CategoryApiResponseBuilder
-com/example/study/repository/CategoryRepository.java
- com.example.study.repository.CategoryRepository
+com/example/study/controller/api/UserApiController.java
+ com.example.study.controller.api.UserApiController
