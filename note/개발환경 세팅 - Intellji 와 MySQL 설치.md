@@ -6,25 +6,27 @@ Status: Done
 
 ## Intellij 세팅
 
+![ex_screenshot](./img/screenshot.png)
+
 - 이클립스에서 플러그인을 많이 설치하면 느려지므로 좀 더 개선된 Intellij 사용(유료)
 - 참고 사이트: [https://aileen93.tistory.com/147](https://aileen93.tistory.com/147)
 - Create New Project
     1. 설정
 
-        ![img/1.png)
+        ![img1](./img/1.png)
 
     2. 어떤 플러그인을 만들 때 자동으로 Gradle 파일에 import 시켜주는 역할이 있는데, 
 
         우리는 Web > Spring WEb Starter
 
-        ![img/2.png)
+        ![img2](./img/2.png)
 
     3. 추가적인 세팅
 
     - [x]  use auto-import
     - [x]  use default Gradle wrapper (recommended)
 
-    ![img/3.png)
+    ![img3](./img/3.png)
 
 ## MySQL 데이터베이스 사용
 
