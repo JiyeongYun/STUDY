@@ -8,3 +8,4 @@
 * [Rest API](https://www.notion.so/Rest-API-dd309b817b3e4cb086a9d43df9d70e07)
 * [Spring boot](https://www.notion.so/Spring-boot-300a7214519341c3b6140433c8bb3be4)
 * [Lombok](https://www.notion.so/Lombok-72f1c1c7cffb40bda3a7a7183c8b9394)
+* [JPA(Java Persistent API)](https://www.notion.so/JPA-Java-Persistent-API-983c60ef27724b9ea82fe81ba420638a)
