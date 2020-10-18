@@ -6,7 +6,6 @@ Status: Done
 
 ## Intellij 세팅
 
-![ex_screenshot](./img/screenshot.png)
 
 - 이클립스에서 플러그인을 많이 설치하면 느려지므로 좀 더 개선된 Intellij 사용(유료)
 - 참고 사이트: [https://aileen93.tistory.com/147](https://aileen93.tistory.com/147)
